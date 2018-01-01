@@ -7,6 +7,26 @@
     <title>git基础</title>
 </head>
 <body>
-    <h2>第一条提交记录</h2>
+    <h1>第一条提交记录</h1>
+    <h2>第二条提交记录</h2>
+    <h3>第三条提交记录</h3>
+    <h4>第四条提交记录</h4>
+    <h5>第五条提交记录</h5>
 </body>
+<script>
+    /*
+    1.git init 初始化一个本地仓库
+    2.git add 把文件添加到仓库
+    3.git commit -m 提交文件，并注释说明
+    4.git status 查看仓库状态
+    5.git diff 显示改动内容
+    6.git log 查看提交日志*/
+    function box(){
+        var sum = 0
+        for(var i = 0;i<arguments.length;i++)
+        sum += arguments[i]
+        return sum
+    }
+    alert(box(1,2,3))
+</script>
 </html>
