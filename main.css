@@ -6,4 +6,13 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 微软雅黑;
+    color: #ccc;
+}
+
+.box {
+    width: 1000px;
+    background: #198752;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
 }
