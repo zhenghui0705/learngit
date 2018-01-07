@@ -11,7 +11,8 @@ html {
 .toptitle {
     font-size: 25px;
     padding-top: 20px;
-    color: #00bcd4;
+    color: #fff;
+    font-family: 微软雅黑;
 }
 
 .text-section {
@@ -29,6 +30,6 @@ html {
     text-align: left;
     text-indent: 2em;
     line-height: 3em;
-    color: #ccc;
+    color: #f3f3f3;
     padding: 10px 20px;
 }
