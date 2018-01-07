@@ -18,3 +18,5 @@
 1. git branch -d dev 删除分支dev
 1. git branch 查看分区。前面带*的为当前分区
 1. git merge dev 合并指定分支到当前分支
+
+###Creating a new branch is quick and simple.
