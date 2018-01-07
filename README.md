@@ -18,6 +18,7 @@
 1. git branch -d dev 删除分支dev
 1. git branch 查看分区。前面带*的为当前分区
 1. git merge dev 合并指定分支到当前分支
+1. git stash 把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
 
 > 2018-1-7 13:09:01
 Creating a new branch is quick and simple.
