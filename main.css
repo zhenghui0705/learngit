@@ -1,18 +1,34 @@
 @charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
     width: 100%;
-    background-color: #ccc;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 微软雅黑;
-    color: #ccc;
+.toptitle {
+    font-size: 25px;
+    padding-top: 20px;
+    color: #00bcd4;
 }
 
-.box {
+.text-section {
     width: 1000px;
     background: #198752;
-    margin: 0 auto;
     text-align: center;
-    padding: 10px 0;
+    margin: 50px auto;
+    border-radius: 15px;
+}
+
+.text p {
+    font-size: 15px;
+    font-family: 微软雅黑;
+    font-weight: 500;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 3em;
+    color: #ccc;
+    padding: 10px 20px;
 }

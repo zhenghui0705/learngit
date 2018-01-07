@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,43 @@
     <link rel="stylesheet" href="main.css">
     <title>git基础</title>
 </head>
+
 <body>
-    <div class="box">
-        <h1>第一条提交记录</h1>
-        <h2>第二条提交记录</h2>
-        <h3>第三条提交记录</h3>
-        <h4>第四条提交记录</h4>
-        <h5>第五条提交记录</h5>
-        <h6>第六条提交记录</h6>
-    </div>
-    <div class="box">
-        <h1>新分区dev内容</h1>
+    <div class="text-section">
+        <h2 class="toptitle">小结</h2>
+        <div class="text">
+            <p>一:HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
+            <p>二:场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+            <p>三:要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git； 关联后，使用命令git push -u origin master第一次推送master分支的所有内容； 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
+            <p>四:当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用git log --graph命令可以看到分支合并图。</p>
+        </div>
     </div>
 </body>
 <script>
     /*
-    1.git init 初始化一个本地仓库
-    2.git add 把文件添加到仓库(把所有修改放到暂存区Stage)
-    3.git commit -m 提交文件，并注释说明（把暂存区Stage的所有内容提交到分支）
-    4.git status 查看仓库状态
-    5.git diff 显示改动内容
-    6.git diff --cached 暂存区Stage和分支master的比较
-    7.git log 查看提交日志
-    8.git reset --hard 版本号  回退版本。
-    9.git log --pretty=oneline 查看版本号，减少不必要的信息--pretty=oneline参数
-    10.git reflog 查看记录命令
-    11.git reset HEAD file 撤销暂存区
-    12.git checkout -- readme.txt 丢弃工作区
-    13.git remote add origin git@github.com:zhenghui0705/learngit.git 远程仓库与本地仓库关联。
-    14.git push 当前分支master推送到远程
-    15.git checkout -b dev 创建切换分支
-    16.git checkout dev 创建分支dev
-    17.git branch -d dev 删除分支dev
-    17.git branch 查看分区。前面带*的为当前分区
-    18.git merge dev 合并指定分支到当前分支
-    19.git log --graph */
+        1.git init 初始化一个本地仓库
+        2.git add 把文件添加到仓库(把所有修改放到暂存区Stage)
+        3.git commit -m 提交文件，并注释说明（把暂存区Stage的所有内容提交到分支）
+        4.git status 查看仓库状态
+        5.git diff 显示改动内容
+        6.git diff --cached 暂存区Stage和分支master的比较
+        7.git log 查看提交日志
+        8.git reset --hard 版本号  回退版本。
+        9.git log --pretty=oneline 查看版本号，减少不必要的信息--pretty=oneline参数
+        10.git reflog 查看记录命令
+        11.git reset HEAD file 撤销暂存区
+        12.git checkout -- readme.txt 丢弃工作区
+        13.git remote add origin git@github.com:zhenghui0705/learngit.git 远程仓库与本地仓库关联。
+        14.git push 当前分支master推送到远程
+        15.git checkout -b dev 创建切换分支
+        16.git checkout dev 创建分支dev
+        17.git branch -d dev 删除分支dev
+        17.git branch 查看分区。前面带*的为当前分区
+        18.git merge dev 合并指定分支到当前分支
+        19.git log --graph */
 
-    /*
-    小结
-    一。HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
-    穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
-    要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
-    二。
-    场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
-    场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。
-    场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
-    三。
-    要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
-    关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
-    此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
-    */
 
     /**/
 </script>
+
 </html>
