@@ -15,11 +15,12 @@
         <h2 class="toptitle">小结</h2>
         <div class="text">
             <p>一。HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。 要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。</p>
-            <p>二。<span style="color:#000;">场景1:</span>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。 <span style="color:#000;">场景2:</span>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。 <span style="color:#000;">场景3:</span>已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+            <p>二。<span style="color:#9fb9e8;">场景1:</span>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。 <span style="color:#9fb9e8;">场景2:</span>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。 <span style="color:#9fb9e8;">场景3:</span>已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
             <p>三。要关联一个远程库，使用命令git remote add origin git@github.com:zhenghui0705/learngit.git； 关联后，使用命令git push -u origin master第一次推送master分支的所有内容； 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；</p>
-            <p>四:当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用git log --graph命令可以看到分支合并图。</p>
-            <p>五:合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
-            <p>六:修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</p>
+            <p>四。当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用git log --graph命令可以看到分支合并图。</p>
+            <p>五。合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+            <p>六。修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。</p>
+            <P>七。开发一个新feature，最好新建一个分支；如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除。</P>
         </div>
     </div>
 </body>

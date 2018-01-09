@@ -10,7 +10,7 @@ html {
 
 .toptitle {
     font-size: 25px;
-    padding-top: 20px;
+    padding-top: 12px;
     color: #fff;
     font-family: 微软雅黑;
 }
@@ -21,6 +21,7 @@ html {
     text-align: center;
     margin: 50px auto;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px #000;
 }
 
 .text p {
