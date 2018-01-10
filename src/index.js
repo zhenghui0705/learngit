@@ -5,3 +5,13 @@ function setMath(){
     return sum
 }
 console.log(setMath(1,2,3));
+
+
+
+function setColor(){
+    var color = 0
+    for(var j = 0;j < arguments.length; j++)
+    color += arguments[j]
+    return color
+}
+alert(setColor(1,2,3))
