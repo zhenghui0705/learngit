@@ -8,6 +8,10 @@ html {
     width: 100%;
 }
 
+body {
+    padding: 0 50px;
+}
+
 .toptitle {
     font-size: 25px;
     padding-top: 12px;
@@ -16,7 +20,7 @@ html {
 }
 
 .text-section {
-    width: 1000px;
+    width: 100%;
     background: #198752;
     text-align: center;
     margin: 50px auto;

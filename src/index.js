@@ -14,4 +14,3 @@ function setColor() {
 }
 
 var sum = setColor(1,2,3)
-document.write(sum)
