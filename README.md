@@ -27,5 +27,10 @@
 1. git checkout -b branch-name origin/branch-name 在本地创建与远程分支对应的分支
 1. git pull 从远程抓取分支
 1. git branch --set-upstream branch-name origin/branch-name 本地分支与远程分支关联
-> 2018-1-7 13:09:01
-Creating a new branch is quick and simple.
+1. git tag name 打标签
+1. git tag v0.9 26d88 给commit id为26d88打上标签v0.9      
+1. git tag 查看所有标签
+1. git tag -d v0.9 删除v0.9这个标签
+
+> 2018年1月14日13:47:36
+Not equipped with sword, go out is the arena!

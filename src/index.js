@@ -1,5 +1,5 @@
-$(document).ready(function(){
+$(function(){
 	$('.toptitle').click(function(){
-		$('.text').toggle('slow')
-	});
+		$('.text').
+	})
 })
