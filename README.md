@@ -22,5 +22,10 @@
 1. git stash list 查看工作现场
 1. git stash pop 恢复工作现场 并删除
 1. git branch -D <name> 强行删除一个没有被合并的分区
+1. git remote -v 查看远程库信息
+1. git push origin branch-name 从本地推送分支
+1. git checkout -b branch-name origin/branch-name 在本地创建与远程分支对应的分支
+1. git pull 从远程抓取分支
+1. git branch --set-upstream branch-name origin/branch-name 本地分支与远程分支关联
 > 2018-1-7 13:09:01
 Creating a new branch is quick and simple.
